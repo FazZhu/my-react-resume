@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaEnvelope, FaGit, FaGithub, FaPhone } from 'react-icons/fa';
+import BaseInfo from './components/baseInfo';
+import Skills from './components/Skills';
+import SectionFrame from './components/SectionFrame'
 
 const Resume = () => {
   return (
@@ -11,28 +13,7 @@ const Resume = () => {
         {/* 左侧栏 */}
         <div className="col-span-1 space-y-4">
 
-          {/* Header */}
-          <div className="bg-white rounded-lg shadow p-5 text-center">
-            <h1 className="text-3xl font-bold text-gray-800">李景骏</h1>
-            <p className="text-md text-gray-500 mt-1">学历 - 本科</p>
-            <p className="text-lg text-gray-600">前端开发 | 测试开发</p>
-          </div>
-
-          {/* 联系方式 */}
-          <div className="bg-white rounded-lg shadow p-5 text-gray-700 space-y-2 text-center">
-            <div className="flex items-center justify-center space-x-1">
-              <FaEnvelope className="text-blue-500" />
-              <a href="mailto:lijingjun466@163.com" className="hover:text-blue-700 text-md">lijingjun466@163.com</a>
-            </div>
-            <div className="flex items-center justify-center space-x-1">
-              <FaPhone className="text-blue-500" />
-              <span className="text-md">17612068443</span>
-            </div>
-            <div className="flex items-center justify-center space-x-1">
-              <FaGithub className="text-blue-500" />
-              <span className="text-sm">https://github.com/FazZhu</span>
-            </div>
-          </div>
+          <BaseInfo/>
 
           {/* 专业技能 */}
           <div className="bg-white rounded-lg shadow p-5">
@@ -50,23 +31,19 @@ const Resume = () => {
               <SkillProgress skill="Docker" level="40%" />
             </div>
           </div>
+          <div className="bg-white rounded-lg shadow p-5">
+          <h2 className="text-lg font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">获奖情况</h2>
+          <ul className='list-disc list-inside text-gray-600 mt-2 text-sm'>
+            <li>第十五届蓝桥杯国赛Python大学生B组-三等奖</li>
+            <li>大三学年校级一等奖学金（专业排名第五）</li>
+          </ul>
+          </div>
         </div>
 
         {/* 右侧栏 */}
         <div className="col-span-2 space-y-4">
-
-          {/* 个人优势 */}
-          <section className="bg-white rounded-lg shadow p-5">
-            <h2 className="text-lg font-semibold text-gray-800 border-b-2 border-blue-500 pb-1 mb-3">个人优势</h2>
-            <ul className="grid grid-cols-2 gap-2 text-gray-600 text-sm">
-              <li><span className="font-bold text-blue-500">•</span> 乐于学习：积极参加比赛，展示了强大的学习能力。</li>
-              <li><span className="font-bold text-blue-500">•</span> 对人友善：良好的团队合作和沟通能力。</li>
-              <li><span className="font-bold text-blue-500">•</span> 认真负责：高度责任感，具备时间管理能力。</li>
-              <li><span className="font-bold text-blue-500">•</span> 动手能力强：丰富的项目实践经验，善于解决问题。</li>
-              <li><span className="font-bold text-blue-500">•</span> 英语能力佳：能熟练阅读英文文献和技术文档。</li>
-              <li><span className="font-bold text-blue-500">•</span> 自我驱动：主动探索新技术，具备创新思维。</li>
-            </ul>
-          </section>
+        <Skills/>
+          
 
           {/* 项目经历 */}
           <section className="bg-white rounded-lg shadow p-5">
@@ -100,6 +77,7 @@ const Resume = () => {
               </ul>
             </div>
           </section>
+          
         </div>
       </div>
     </div>
